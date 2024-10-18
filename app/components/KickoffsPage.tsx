@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { SearchKickoffsResponse, SearchKickoffsInput } from '../types/KickoffTypes';
+import { SearchKickoffsResponse } from '../types/KickoffTypes';
 import { fetchKickoffs } from '../queries/SearchKickoffs';
 
 const KickoffsPage = () => {

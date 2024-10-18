@@ -1,5 +1,5 @@
-import { GraphQLClient, gql } from 'graphql-request';
-import { SearchKickoffsInput, SearchKickoffsResponse } from '../types/KickoffTypes';
+import { gql } from 'graphql-request';
+import { SearchKickoffsInput } from '../types/KickoffTypes';
 
 const SEARCH_KICKOFFS = gql`
   query SearchKickoffs($input: SearchKickoffsInput!) {
@@ -48,7 +48,7 @@ export const fetchKickoffs = async (variables: SearchKickoffsInput) => {
     },
     body: JSON.stringify({
       query: SEARCH_KICKOFFS,  // Now a plain string instead of gql-processed
-      variables, 
+      variables,
     }),
   });
 
@@ -61,4 +61,4 @@ export const fetchKickoffs = async (variables: SearchKickoffsInput) => {
 };
 
 
-  
+
